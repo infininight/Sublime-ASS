@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>contactEmailRot13</key>
+	<string>tvg@juvgrsnyyf.bet</string>
+	<key>contactName</key>
+	<string>Michael Sheets</string>
+	<key>description</key>
+	<string>Styled subtitle files for video formats, supports ass and ssa files.</string>
+	<key>name</key>
+	<string>ASS</string>
+	<key>uuid</key>
+	<string>E70C9401-2D57-4E2A-A9AF-7FA0D3F40A3E</string>
+</dict>
+</plist>
