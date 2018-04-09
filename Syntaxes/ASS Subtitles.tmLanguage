@@ -71,15 +71,23 @@
 						</dict>
 					</dict>
 					<key>match</key>
-					<string>(;).*</string>
+					<string>^(;).*$\n?</string>
 					<key>name</key>
-					<string>comment.Comment.semicolon.ass</string>
+					<string>comment.line.semicolon.ass</string>
 				</dict>
 				<dict>
+					<key>captures</key>
+					<dict>
+						<key>1</key>
+						<dict>
+							<key>name</key>
+							<string>punctuation.definition.comment.ass</string>
+						</dict>
+					</dict>
 					<key>match</key>
-					<string>(?i)Comment\s*:.*</string>
+					<string>(?i)(Comment\s*:).*$\n?</string>
 					<key>name</key>
-					<string>comment.Comment.comment.ass</string>
+					<string>comment.line.other.ass</string>
 				</dict>
 			</array>
 		</dict>
