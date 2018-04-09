@@ -32,10 +32,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#leadingSpace</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#comment</string>
 		</dict>
 		<dict>
@@ -56,7 +52,7 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#othersAreInvalid</string>
+			<string>#invalid</string>
 		</dict>
 	</array>
 	<key>repository</key>
@@ -326,25 +322,15 @@
 				</dict>
 			</array>
 		</dict>
-		<key>leadingSpace</key>
+		<key>invalid</key>
 		<dict>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
-					<string>^\s+</string>
-				</dict>
-			</array>
-		</dict>
-		<key>othersAreInvalid</key>
-		<dict>
-			<key>patterns</key>
-			<array>
-				<dict>
-					<key>match</key>
-					<string>invalid.illegal.ass</string>
+					<string>\S+</string>
 					<key>name</key>
-					<string>.+</string>
+					<string>invalid.illegal.characters-not-recongnized.ass</string>
 				</dict>
 			</array>
 		</dict>
