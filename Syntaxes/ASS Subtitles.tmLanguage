@@ -40,18 +40,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#style</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#dialogue</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#sectionProperties</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#invalid</string>
 		</dict>
 	</array>
@@ -347,6 +335,23 @@
 			<key>patterns</key>
 			<array>
 				<dict>
+					<key>begin</key>
+					<string>(?ix)
+						^(\[)
+							(
+								(?:
+									Script\ (Info)
+								  | V4\+?\ (Styles)
+								  | (Events)
+								  | (Fonts)
+								  | (Graphics)
+								  | (Events)
+								  | (Aegisub)\ Project\ Garbage
+								)
+							  | ([^\]]*)
+							)
+						(\])
+					</string>
 					<key>captures</key>
 					<dict>
 						<key>1</key>
@@ -354,21 +359,40 @@
 							<key>name</key>
 							<string>punctuation.definition.Section.begin.ass</string>
 						</dict>
-						<key>2</key>
-						<dict>
-							<key>name</key>
-							<string>entity.name.Section.ass</string>
-						</dict>
-						<key>3</key>
+						<key>11</key>
 						<dict>
 							<key>name</key>
 							<string>punctuation.definition.Section.end.ass</string>
 						</dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>entity.name.section.ass</string>
+						</dict>
 					</dict>
-					<key>match</key>
-					<string>(?i)(\[)([^\]]+)(\])\s*$</string>
+					<key>end</key>
+					<string>(?=^\[)</string>
 					<key>name</key>
-					<string>meta.preprocessor.Section.ass</string>
+					<string>meta.section.${3:/downcase}${4:/downcase}${5:/downcase}${6:/downcase}${7:/downcase}${8:/downcase}${9:/downcase}${10:+other}.ass</string>
+					<key>patterns</key>
+					<array>
+						<dict>
+							<key>include</key>
+							<string>#comment</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#style</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#dialogue</string>
+						</dict>
+						<dict>
+							<key>include</key>
+							<string>#sectionProperties</string>
+						</dict>
+					</array>
 				</dict>
 			</array>
 		</dict>
